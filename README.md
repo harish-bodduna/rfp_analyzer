@@ -1,58 +1,143 @@
-# RFP Analyzer
+# RFP Analyzer (Backend)
 
-Backend services for automating extraction of structured traits from RFP/RFQ documents. Upload PDFs, process them asynchronously, and return standardized traits with provenance.
+This is the FastAPI + Celery service that ingests PDFs, chunks them, summarizes the relevant passages, and extracts 15 procurement traits with evidence. Follow the steps below exactly—no guesswork required.
 
-## Key Features
-- FastAPI-based API for uploads, processing, and retrieval of extracted traits
-- Celery worker pipeline for parsing, chunking, summarization, embeddings, and trait extraction
-- Support for OpenAI LLM/embedding APIs
-- Storage strategy that keeps raw PDFs, structured metadata, sections, chunks, and summaries
-- Configurable trait definitions (15 trait MVP)
+---
 
-## Getting Started
-1. Create a Python 3.11+ virtual environment.
-2. Install dependencies (plus system packages for PDF parsing):
-   ```bash
-   sudo apt install -y tesseract-ocr poppler-utils libmagic-dev libgl1
-   pip install -e .
-   ```
-3. Copy `.env.example` to `.env` and customize settings (DB URLs, OpenAI keys, file paths).
-4. Run the API server:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
-5. Start Celery workers:
-   ```bash
-   celery -A app.workers.celery_app worker -l info
-   ```
+## 1. What you need first
 
-### Environment Variables
-At minimum configure the following keys in `.env`:
+### Linux / Ubuntu
+```bash
+sudo apt update
+sudo apt install -y python3.11 python3.11-venv python3-pip git redis-server postgresql \
+    tesseract-ocr poppler-utils libmagic-dev libgl1
+```
+Make sure PostgreSQL and Redis are running (`sudo systemctl status postgresql redis-server`).
 
+### Windows 11 / 10
+Open **PowerShell as Administrator**:
+```powershell
+wsl --install      # optional but recommended for Linux tooling
+winget install Python.Python.3.11
+winget install Git.Git
+winget install Redis.Redis-Server
+winget install PostgreSQL.PostgreSQL
+winget install UB-Mannheim.TesseractOCR
+winget install Poppler
+```
+Restart PowerShell after installs finish. If you prefer WSL, run the Linux commands inside Ubuntu instead.
+
+---
+
+## 2. Clone the repo
+```bash
+git clone https://github.com/harish-bodduna/rfp_analyzer.git
+cd rfp_analyzer
+```
+
+---
+
+## 3. Create and activate a Python environment
+
+### Linux / Ubuntu
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+### Windows (PowerShell)
+```powershell
+python -m venv .venv
+.\\.venv\\Scripts\\Activate.ps1
+python -m pip install --upgrade pip
+```
+
+Keep this terminal open; you’ll run all backend commands here.
+
+---
+
+## 4. Install Python dependencies
+```bash
+pip install -e .
+```
+If PyTorch or transformers need CUDA, install the matching wheels for your GPU stack.
+
+---
+
+## 5. Configure environment variables
+Copy the example file and edit it:
+
+### Linux / Ubuntu
+```bash
+cp .env.example .env
+nano .env      # or your favorite editor
+```
+
+### Windows (PowerShell)
+```powershell
+copy .env.example .env
+notepad .env
+```
+
+Set at least these keys:
 ```
 DATABASE_URL=postgresql+psycopg2://user:password@localhost:5432/rfp_analyzer
 REDIS_URL=redis://localhost:6379/0
-LLM_PROVIDER=transformers
-EMBED_PROVIDER=transformers
-OPENAI_API_KEY=
 TRANSFORMER_LLM_MODEL=meta-llama/Meta-Llama-3.1-8B-Instruct
 TRANSFORMER_LLM_MODELS=["meta-llama/Meta-Llama-3.1-8B-Instruct","google/flan-t5-large"]
 TRANSFORMER_EMBED_MODEL=intfloat/e5-large-v2
-TRANSFORMER_DEVICE=cuda:0
-TRANSFORMER_MAX_NEW_TOKENS=512
+TRANSFORMER_DEVICE=cuda:0        # use cpu if no GPU
 DATA_ROOT=data
 RAW_FILES_DIR=data/raw_files
 PROCESSED_FILES_DIR=data/processed_files
 UPLOADED_FILES_DIR=data/uploaded_files
 ```
+Add API keys or model paths as needed.
 
-Flip both providers to `openai` and set `OPENAI_API_KEY` when you regain API access.
+---
 
-## Directory Layout
-- `app/`: Application code organized by API, core config, database models, schemas, services, utils, and Celery workers
-- `data/raw_files`, `data/processed_files`, `data/uploaded_files`: Storage locations for documents and derived assets
-- `scripts/`: Utilities such as data seeding or evaluation helpers
-- `tests/`: Automated tests (to be added)
+## 6. Prep the database
+1. Create a database in Postgres: `createdb rfp_analyzer` (Linux) or use pgAdmin/DBeaver on Windows.
+2. Run migrations or let the ORM create tables on first use (current MVP auto-creates via SQLModel).
 
-## Status
-This is an initial scaffolding to accelerate iteration on parsing, retrieval, and trait extraction. Additional implementation details, tests, and deployment scripts will be layered on top.
+---
+
+## 7. Start backend services
+
+### Terminal 1 – FastAPI API
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### Terminal 2 – Celery worker
+Activate the same virtualenv, then:
+```bash
+celery -A app.workers.celery_app worker --loglevel=info
+```
+
+Both terminals must stay open while processing PDFs.
+
+---
+
+## 8. Test that everything works
+1. `curl http://localhost:8000/health` should return `{"status":"ok"}`.
+2. Use the frontend (see `rfp_insights_dashboard` repo) or Swagger at `http://localhost:8000/docs` to upload a PDF.
+3. Watch the Celery logs for status changes (`UPLOADED -> IN_FLIGHT -> PROCESSING -> COMPLETED`).
+
+---
+
+## 9. Useful directories
+- `app/` – FastAPI routes, services, Celery tasks.
+- `data/raw_files` – PDFs as uploaded.
+- `data/processed_files` – chunk metadata snapshots.
+- `data/uploaded_files` – UI uploads awaiting processing.
+
+---
+
+## 10. Need help?
+- If the model downloads are slow or gated, log in to Hugging Face first: `huggingface-cli login`.
+- For GPU issues, ensure the NVIDIA drivers & CUDA toolkit match your torch build.
+- For networking (accessing from another laptop), bind FastAPI to `0.0.0.0` and use your LAN IP.
+
+That’s it—follow the steps in order and the backend will be up even if you’re brand new to Python services.
