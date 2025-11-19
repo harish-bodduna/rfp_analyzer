@@ -1,0 +1,109 @@
+[
+  {
+    "id": "fdf75541-5ad2-4ad3-b44c-9a320c2a0364",
+    "page_start": 1,
+    "page_end": 3,
+    "token_count": 558,
+    "metadata": {
+      "element_ids": [
+        "4017382c-52bb-4a84-b879-f235cd0f1cdc",
+        "43e55280-6320-4f04-b56a-be732c95d872",
+        "087382c0-ab22-4eb5-8f50-a252be378a5a"
+      ],
+      "element_types": [
+        "Page"
+      ],
+      "source_pages": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "2e39896f-6326-4dfd-8607-7d87f321168a",
+    "page_start": 3,
+    "page_end": 5,
+    "token_count": 900,
+    "metadata": {
+      "element_ids": [
+        "087382c0-ab22-4eb5-8f50-a252be378a5a:overlap",
+        "d9102d12-2341-410c-96d9-a7158248adca",
+        "27cf5b52-184e-4b4f-9622-c8f869694d45"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "6708d6fc-29b9-413c-8910-867cb20878e3",
+    "page_start": 5,
+    "page_end": 7,
+    "token_count": 864,
+    "metadata": {
+      "element_ids": [
+        "27cf5b52-184e-4b4f-9622-c8f869694d45:overlap",
+        "35bd4869-53db-4ac5-b820-3bc7bc03739f",
+        "8cd6cb01-5d19-4fe3-ad4b-d35b9fb99e2a"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "id": "8c09d92e-db36-4807-ad48-1b688b259d41",
+    "page_start": 7,
+    "page_end": 9,
+    "token_count": 843,
+    "metadata": {
+      "element_ids": [
+        "8cd6cb01-5d19-4fe3-ad4b-d35b9fb99e2a:overlap",
+        "96207799-a215-49e1-91cb-eeff733f29c2",
+        "754c73fd-f465-4c99-b769-235c8214774a"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "id": "5b501d7b-4bfb-4854-b5af-1e61bd79a7ab",
+    "page_start": 9,
+    "page_end": 10,
+    "token_count": 163,
+    "metadata": {
+      "element_ids": [
+        "754c73fd-f465-4c99-b769-235c8214774a:overlap",
+        "caffc567-0173-432d-ab1e-8f9c63dd04b1"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        9,
+        10
+      ]
+    }
+  }
+]
