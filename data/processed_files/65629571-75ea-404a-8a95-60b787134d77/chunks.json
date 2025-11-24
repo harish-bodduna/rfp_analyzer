@@ -1,0 +1,471 @@
+[
+  {
+    "id": "ca0c66f9-c542-4751-a4be-ee88f0fcdad7",
+    "page_start": 1,
+    "page_end": 1,
+    "token_count": 498,
+    "metadata": {
+      "element_ids": [
+        "c7f7af1b-491b-4b57-9ccb-1dd47c1802c8"
+      ],
+      "element_types": [
+        "Page"
+      ],
+      "source_pages": [
+        1
+      ]
+    }
+  },
+  {
+    "id": "98afd8f4-fa7f-4599-b67f-9f580e6c46c3",
+    "page_start": 1,
+    "page_end": 2,
+    "token_count": 565,
+    "metadata": {
+      "element_ids": [
+        "c7f7af1b-491b-4b57-9ccb-1dd47c1802c8:overlap",
+        "032ca69a-70d3-4351-91fa-d540a2aea8ab"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "id": "07f1f1e7-2971-4e18-8695-25a0bb941034",
+    "page_start": 2,
+    "page_end": 3,
+    "token_count": 543,
+    "metadata": {
+      "element_ids": [
+        "032ca69a-70d3-4351-91fa-d540a2aea8ab:overlap",
+        "da3a7037-c7da-46c6-ae90-f45eaa7a0bc5"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "id": "64b1780f-56f2-47aa-a812-0d0029ae470f",
+    "page_start": 3,
+    "page_end": 4,
+    "token_count": 685,
+    "metadata": {
+      "element_ids": [
+        "da3a7037-c7da-46c6-ae90-f45eaa7a0bc5:overlap",
+        "77ef725a-9ff9-41c0-bad1-6d65e149da27"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "id": "fb1b649d-dc6a-47e3-8f46-0a82368708bb",
+    "page_start": 4,
+    "page_end": 5,
+    "token_count": 781,
+    "metadata": {
+      "element_ids": [
+        "77ef725a-9ff9-41c0-bad1-6d65e149da27:overlap",
+        "768b5526-19fd-45e6-8193-0f19a0f52103"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "id": "37fcb68b-8577-4deb-ab5f-ead1a7984e38",
+    "page_start": 5,
+    "page_end": 6,
+    "token_count": 776,
+    "metadata": {
+      "element_ids": [
+        "768b5526-19fd-45e6-8193-0f19a0f52103:overlap",
+        "e55fcda2-d8ce-470f-be26-8318c42130b9"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "9f98a80e-be7e-46c8-87b4-0f42d32dd920",
+    "page_start": 6,
+    "page_end": 7,
+    "token_count": 655,
+    "metadata": {
+      "element_ids": [
+        "e55fcda2-d8ce-470f-be26-8318c42130b9:overlap",
+        "bece1cab-2154-4a13-8b48-1e01cdb9fe66"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        6,
+        7
+      ]
+    }
+  },
+  {
+    "id": "fc9c9be0-9d67-41d8-b25e-e327a7b4bd0b",
+    "page_start": 7,
+    "page_end": 8,
+    "token_count": 609,
+    "metadata": {
+      "element_ids": [
+        "bece1cab-2154-4a13-8b48-1e01cdb9fe66:overlap",
+        "de08352a-d853-485a-8148-d70883d4d1ed"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "id": "40986fe3-1d6f-45ef-9f0e-c92917461d5d",
+    "page_start": 8,
+    "page_end": 9,
+    "token_count": 609,
+    "metadata": {
+      "element_ids": [
+        "de08352a-d853-485a-8148-d70883d4d1ed:overlap",
+        "f0705d50-95a6-4c72-8433-d7430eb4ba34"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "id": "cb6498b9-5224-4a9d-a1fc-602595e27897",
+    "page_start": 9,
+    "page_end": 10,
+    "token_count": 589,
+    "metadata": {
+      "element_ids": [
+        "f0705d50-95a6-4c72-8433-d7430eb4ba34:overlap",
+        "366fd3f9-29bd-418c-bffc-cafec3496c25"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "id": "e5761d45-e0e5-4371-9ed2-1cad18e5225f",
+    "page_start": 10,
+    "page_end": 11,
+    "token_count": 772,
+    "metadata": {
+      "element_ids": [
+        "366fd3f9-29bd-418c-bffc-cafec3496c25:overlap",
+        "5f980711-79a7-4452-a93a-6e6c7b3f49c1"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "id": "3c5859a3-3a8f-499f-bb5c-1d6f5ff68b9e",
+    "page_start": 11,
+    "page_end": 12,
+    "token_count": 674,
+    "metadata": {
+      "element_ids": [
+        "5f980711-79a7-4452-a93a-6e6c7b3f49c1:overlap",
+        "a77d7a09-55ed-4f14-90f6-1ec9d5644ff6"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "id": "638994b4-e131-48a2-874d-b8c46e8f7bf7",
+    "page_start": 12,
+    "page_end": 13,
+    "token_count": 642,
+    "metadata": {
+      "element_ids": [
+        "a77d7a09-55ed-4f14-90f6-1ec9d5644ff6:overlap",
+        "24fecdf8-bf8d-4431-953a-98c567d54019"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "id": "6ccda959-c9fb-48d7-bf1e-7a56e38612aa",
+    "page_start": 13,
+    "page_end": 14,
+    "token_count": 669,
+    "metadata": {
+      "element_ids": [
+        "24fecdf8-bf8d-4431-953a-98c567d54019:overlap",
+        "ea70666b-fc79-4df5-b19a-63189e87a931"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        13,
+        14
+      ]
+    }
+  },
+  {
+    "id": "9e001fee-982a-4aa3-907d-8cfe5c7c1ef1",
+    "page_start": 14,
+    "page_end": 15,
+    "token_count": 699,
+    "metadata": {
+      "element_ids": [
+        "ea70666b-fc79-4df5-b19a-63189e87a931:overlap",
+        "c311be14-6326-4ad4-9f58-ef81fdbe0c80"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        14,
+        15
+      ]
+    }
+  },
+  {
+    "id": "197dec59-270c-4419-9f6f-afc9dfbbb05f",
+    "page_start": 15,
+    "page_end": 16,
+    "token_count": 562,
+    "metadata": {
+      "element_ids": [
+        "c311be14-6326-4ad4-9f58-ef81fdbe0c80:overlap",
+        "d353a4ea-1b6c-4368-8f36-920006f5a1f6"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        15,
+        16
+      ]
+    }
+  },
+  {
+    "id": "68583478-3673-402d-93c3-f37bb1c61d63",
+    "page_start": 16,
+    "page_end": 17,
+    "token_count": 502,
+    "metadata": {
+      "element_ids": [
+        "d353a4ea-1b6c-4368-8f36-920006f5a1f6:overlap",
+        "b5ec802b-0f04-44ea-bef4-357fc2f7b105"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        16,
+        17
+      ]
+    }
+  },
+  {
+    "id": "19ab8952-7985-4956-8e62-812554a6a403",
+    "page_start": 17,
+    "page_end": 19,
+    "token_count": 819,
+    "metadata": {
+      "element_ids": [
+        "b5ec802b-0f04-44ea-bef4-357fc2f7b105:overlap",
+        "d22a4dd8-97a4-4a1a-9e96-b2a441acf7ac",
+        "3487a70d-fe90-4ede-88fa-7a7e63c54fae"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        17,
+        18,
+        19
+      ]
+    }
+  },
+  {
+    "id": "b2206643-9d7e-4e1b-b414-7071920d9ba2",
+    "page_start": 19,
+    "page_end": 20,
+    "token_count": 999,
+    "metadata": {
+      "element_ids": [
+        "3487a70d-fe90-4ede-88fa-7a7e63c54fae:overlap",
+        "7e517032-5b6b-40bd-8d2a-1304f57190d9:0"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        19,
+        20
+      ]
+    }
+  },
+  {
+    "id": "17929aa6-144c-47e1-b298-ff4140173e55",
+    "page_start": 20,
+    "page_end": 22,
+    "token_count": 829,
+    "metadata": {
+      "element_ids": [
+        "7e517032-5b6b-40bd-8d2a-1304f57190d9:0:overlap",
+        "7e517032-5b6b-40bd-8d2a-1304f57190d9:1",
+        "f42f1750-3992-4834-8c21-0c1cf785be81",
+        "95b951eb-769f-4477-8c8c-fff7d6263125"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        20,
+        20,
+        21,
+        22
+      ]
+    }
+  },
+  {
+    "id": "667ddf87-26b1-4ab4-b0a4-9aa159ccc401",
+    "page_start": 22,
+    "page_end": 23,
+    "token_count": 533,
+    "metadata": {
+      "element_ids": [
+        "95b951eb-769f-4477-8c8c-fff7d6263125:overlap",
+        "b5d66848-aea6-43dd-8c7b-9d3fe838ee5d"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        22,
+        23
+      ]
+    }
+  },
+  {
+    "id": "51235a51-d942-41c3-8b41-e4c1c6c94a5b",
+    "page_start": 23,
+    "page_end": 25,
+    "token_count": 805,
+    "metadata": {
+      "element_ids": [
+        "b5d66848-aea6-43dd-8c7b-9d3fe838ee5d:overlap",
+        "5ee5d910-ddeb-44ea-a311-7cae67c81326",
+        "3139c570-6d1d-490c-a256-0da432abd0e7"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  {
+    "id": "e4f8a241-70cc-4c27-8dc7-03bb675aeb09",
+    "page_start": 25,
+    "page_end": 28,
+    "token_count": 751,
+    "metadata": {
+      "element_ids": [
+        "3139c570-6d1d-490c-a256-0da432abd0e7:overlap",
+        "3ee27f0a-2faa-4ccf-b73d-99dd150b1149",
+        "feee6219-5ca8-42ec-8a62-eb04705d0d6f",
+        "55624457-6016-4d76-9b21-2ebf572d41d1"
+      ],
+      "element_types": [
+        "overlap",
+        "Page"
+      ],
+      "source_pages": [
+        25,
+        26,
+        27,
+        28
+      ]
+    }
+  }
+]
